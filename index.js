@@ -34,7 +34,7 @@ app.post('/autenticar', (req, res) => {
             user:"alex"
 		};
 		const token = jwt.sign(payload, app.get('llave'), {
-			expiresIn: "30000ms" // 30 segundos para que expire
+			expiresIn: "120000ms" // 120 segundos para que expire
 		});
 		res.json({
 			mensaje: 'Autenticación correcta',
